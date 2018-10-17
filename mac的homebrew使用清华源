@@ -1,0 +1,12 @@
+1.	替换默认源 
+	cd "$(brew --repo)"
+	git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+	cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
+	git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+	cd 
+	drew update
+	cd "$(brew --repo)/Library/Taps/homebrew/homebrew-science"
+	git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-science.git
+2.	替换Homebrew Bottles源
+	echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles' >> ~/.bash_profile
+	source ~/.bash_profile
